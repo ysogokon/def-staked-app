@@ -1,0 +1,633 @@
+{
+  "contractName": "SunFlowerSeedToken",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "decimals",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "isSummerOver",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.7.6+commit.7338295f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"internalType\":\"uint8\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isSummerOver\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/src/contracts/SunFlowerSeedToken.sol\":\"SunFlowerSeedToken\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/src/contracts/SunFlowerSeedToken.sol\":{\"keccak256\":\"0x6a6966843fa1ec7adfd6c9d3350b451f9cf50bd0bc26429366c1834e607271a1\",\"urls\":[\"bzz-raw://211a222d17be5d30be4ae033d1023c57d115dcc5732881205f16b3e1ecb98f9c\",\"dweb:/ipfs/QmWVYxMdogidww8pT7zCTSb8U9TgooeMXdHsZtexf6tZcN\"]}},\"version\":1}",
+  "bytecode": "0x60806040526040518060400160405280601581526020017f53756e20466c6f776572205365656420546f6b656e00000000000000000000008152506000908051906020019061004f9291906100f3565b506040518060400160405280600481526020017f53465354000000000000000000000000000000000000000000000000000000008152506001908051906020019061009b9291906100f3565b5069d3c21bcecceda10000006002556012600360006101000a81548160ff021916908360ff1602179055506001600360016101000a81548160ff0219169083151502179055503480156100ed57600080fd5b5061019e565b828054600181600116156101000203166002900490600052602060002090601f0160209004810192826101295760008555610170565b82601f1061014257805160ff1916838001178555610170565b82800160010185558215610170579182015b8281111561016f578251825591602001919060010190610154565b5b50905061017d9190610181565b5090565b5b8082111561019a576000816000905550600101610182565b5090565b61035f806101ad6000396000f3fe608060405234801561001057600080fd5b50600436106100575760003560e01c806306fdde031461005c57806318160ddd146100df578063313ce567146100fd57806395d89b411461011e578063be0e844f146101a1575b600080fd5b6100646101c1565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100a4578082015181840152602081019050610089565b50505050905090810190601f1680156100d15780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100e761025f565b6040518082815260200191505060405180910390f35b610105610265565b604051808260ff16815260200191505060405180910390f35b610126610278565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561016657808201518184015260208101905061014b565b50505050905090810190601f1680156101935780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101a9610316565b60405180821515815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102575780601f1061022c57610100808354040283529160200191610257565b820191906000526020600020905b81548152906001019060200180831161023a57829003601f168201915b505050505081565b60025481565b600360009054906101000a900460ff1681565b60018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561030e5780601f106102e35761010080835404028352916020019161030e565b820191906000526020600020905b8154815290600101906020018083116102f157829003601f168201915b505050505081565b600360019054906101000a900460ff168156fea2646970667358221220f43e98f2af941dc21b94b3e2fa339d29f23aee23180d088e623dba013dd5a1d264736f6c63430007060033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100575760003560e01c806306fdde031461005c57806318160ddd146100df578063313ce567146100fd57806395d89b411461011e578063be0e844f146101a1575b600080fd5b6100646101c1565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100a4578082015181840152602081019050610089565b50505050905090810190601f1680156100d15780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6100e761025f565b6040518082815260200191505060405180910390f35b610105610265565b604051808260ff16815260200191505060405180910390f35b610126610278565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561016657808201518184015260208101905061014b565b50505050905090810190601f1680156101935780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b6101a9610316565b60405180821515815260200191505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102575780601f1061022c57610100808354040283529160200191610257565b820191906000526020600020905b81548152906001019060200180831161023a57829003601f168201915b505050505081565b60025481565b600360009054906101000a900460ff1681565b60018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561030e5780601f106102e35761010080835404028352916020019161030e565b820191906000526020600020905b8154815290600101906020018083116102f157829003601f168201915b505050505081565b600360019054906101000a900460ff168156fea2646970667358221220f43e98f2af941dc21b94b3e2fa339d29f23aee23180d088e623dba013dd5a1d264736f6c63430007060033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "35:256:3:-:0;;;68:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;117:29;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;180:25;151:54;;249:2;225:26;;;;;;;;;;;;;;;;;;;;283:4;256:31;;;;;;;;;;;;;;;;;;;;35:256;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "35:256:3:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;68:44;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;151:54;;;:::i;:::-;;;;;;;;;;;;;;;;;;;225:26;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;117:29;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;256:31;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;68:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;151:54::-;;;;:::o;225:26::-;;;;;;;;;;;;;:::o;117:29::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;256:31::-;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.7.0 <0.9.0;\r\n\r\ncontract SunFlowerSeedToken {\r\n  string public name = 'Sun Flower Seed Token';\r\n  string public symbol = 'SFST';\r\n  uint256 public totalSupply = 1000000000000000000000000; // 10 millions\r\n  uint8 public decimals = 18;\r\n  bool public isSummerOver = true;\r\n}\r\n",
+  "sourcePath": "C:\\Users\\ysogokon\\source\\repos\\DApps\\defi-staking-app\\defi-staking-app\\src\\contracts\\SunFlowerSeedToken.sol",
+  "ast": {
+    "absolutePath": "project:/src/contracts/SunFlowerSeedToken.sol",
+    "exportedSymbols": {
+      "SunFlowerSeedToken": [
+        285
+      ]
+    },
+    "id": 286,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 269,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.7",
+          ".0",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:31:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 285,
+        "linearizedBaseContracts": [
+          285
+        ],
+        "name": "SunFlowerSeedToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "06fdde03",
+            "id": 272,
+            "mutability": "mutable",
+            "name": "name",
+            "nodeType": "VariableDeclaration",
+            "scope": 285,
+            "src": "68:44:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 270,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "68:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "hexValue": "53756e20466c6f776572205365656420546f6b656e",
+              "id": 271,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "89:23:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_e78feabf453229427c15c00796df78e7de777ead4369f52dbc90b54863007d63",
+                "typeString": "literal_string \"Sun Flower Seed Token\""
+              },
+              "value": "Sun Flower Seed Token"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "95d89b41",
+            "id": 275,
+            "mutability": "mutable",
+            "name": "symbol",
+            "nodeType": "VariableDeclaration",
+            "scope": 285,
+            "src": "117:29:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_string_storage",
+              "typeString": "string"
+            },
+            "typeName": {
+              "id": 273,
+              "name": "string",
+              "nodeType": "ElementaryTypeName",
+              "src": "117:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_string_storage_ptr",
+                "typeString": "string"
+              }
+            },
+            "value": {
+              "hexValue": "53465354",
+              "id": 274,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "string",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "140:6:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_stringliteral_dc7e935dc08c8841db2b963da7766be8fd1e8c5650fd67fb5d357e325fef9fb7",
+                "typeString": "literal_string \"SFST\""
+              },
+              "value": "SFST"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "18160ddd",
+            "id": 278,
+            "mutability": "mutable",
+            "name": "totalSupply",
+            "nodeType": "VariableDeclaration",
+            "scope": 285,
+            "src": "151:54:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 276,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "151:7:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "hexValue": "31303030303030303030303030303030303030303030303030",
+              "id": 277,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "180:25:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1000000000000000000000000_by_1",
+                "typeString": "int_const 1000000000000000000000000"
+              },
+              "value": "1000000000000000000000000"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "313ce567",
+            "id": 281,
+            "mutability": "mutable",
+            "name": "decimals",
+            "nodeType": "VariableDeclaration",
+            "scope": 285,
+            "src": "225:26:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 279,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "225:5:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "hexValue": "3138",
+              "id": 280,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "249:2:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_18_by_1",
+                "typeString": "int_const 18"
+              },
+              "value": "18"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "be0e844f",
+            "id": 284,
+            "mutability": "mutable",
+            "name": "isSummerOver",
+            "nodeType": "VariableDeclaration",
+            "scope": 285,
+            "src": "256:31:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bool",
+              "typeString": "bool"
+            },
+            "typeName": {
+              "id": 282,
+              "name": "bool",
+              "nodeType": "ElementaryTypeName",
+              "src": "256:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              }
+            },
+            "value": {
+              "hexValue": "74727565",
+              "id": 283,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "bool",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "283:4:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bool",
+                "typeString": "bool"
+              },
+              "value": "true"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 286,
+        "src": "35:256:3"
+      }
+    ],
+    "src": "0:293:3"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/src/contracts/SunFlowerSeedToken.sol",
+      "exportedSymbols": {
+        "SunFlowerSeedToken": [
+          285
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.7",
+            ".0",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 269,
+        "name": "PragmaDirective",
+        "src": "0:31:3"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            285
+          ],
+          "name": "SunFlowerSeedToken",
+          "scope": 286
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "06fdde03",
+              "mutability": "mutable",
+              "name": "name",
+              "scope": 285,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "string",
+                  "type": "string"
+                },
+                "id": 270,
+                "name": "ElementaryTypeName",
+                "src": "68:6:3"
+              },
+              {
+                "attributes": {
+                  "hexvalue": "53756e20466c6f776572205365656420546f6b656e",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "token": "string",
+                  "type": "literal_string \"Sun Flower Seed Token\"",
+                  "value": "Sun Flower Seed Token"
+                },
+                "id": 271,
+                "name": "Literal",
+                "src": "89:23:3"
+              }
+            ],
+            "id": 272,
+            "name": "VariableDeclaration",
+            "src": "68:44:3"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "95d89b41",
+              "mutability": "mutable",
+              "name": "symbol",
+              "scope": 285,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "string",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "string",
+                  "type": "string"
+                },
+                "id": 273,
+                "name": "ElementaryTypeName",
+                "src": "117:6:3"
+              },
+              {
+                "attributes": {
+                  "hexvalue": "53465354",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "token": "string",
+                  "type": "literal_string \"SFST\"",
+                  "value": "SFST"
+                },
+                "id": 274,
+                "name": "Literal",
+                "src": "140:6:3"
+              }
+            ],
+            "id": 275,
+            "name": "VariableDeclaration",
+            "src": "117:29:3"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "18160ddd",
+              "mutability": "mutable",
+              "name": "totalSupply",
+              "scope": 285,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint256",
+                  "type": "uint256"
+                },
+                "id": 276,
+                "name": "ElementaryTypeName",
+                "src": "151:7:3"
+              },
+              {
+                "attributes": {
+                  "hexvalue": "31303030303030303030303030303030303030303030303030",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "token": "number",
+                  "type": "int_const 1000000000000000000000000",
+                  "value": "1000000000000000000000000"
+                },
+                "id": 277,
+                "name": "Literal",
+                "src": "180:25:3"
+              }
+            ],
+            "id": 278,
+            "name": "VariableDeclaration",
+            "src": "151:54:3"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "313ce567",
+              "mutability": "mutable",
+              "name": "decimals",
+              "scope": 285,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint8",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint8",
+                  "type": "uint8"
+                },
+                "id": 279,
+                "name": "ElementaryTypeName",
+                "src": "225:5:3"
+              },
+              {
+                "attributes": {
+                  "hexvalue": "3138",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "token": "number",
+                  "type": "int_const 18",
+                  "value": "18"
+                },
+                "id": 280,
+                "name": "Literal",
+                "src": "249:2:3"
+              }
+            ],
+            "id": 281,
+            "name": "VariableDeclaration",
+            "src": "225:26:3"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "functionSelector": "be0e844f",
+              "mutability": "mutable",
+              "name": "isSummerOver",
+              "scope": 285,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "bool",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "bool",
+                  "type": "bool"
+                },
+                "id": 282,
+                "name": "ElementaryTypeName",
+                "src": "256:4:3"
+              },
+              {
+                "attributes": {
+                  "hexvalue": "74727565",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "token": "bool",
+                  "type": "bool",
+                  "value": "true"
+                },
+                "id": 283,
+                "name": "Literal",
+                "src": "283:4:3"
+              }
+            ],
+            "id": 284,
+            "name": "VariableDeclaration",
+            "src": "256:31:3"
+          }
+        ],
+        "id": 285,
+        "name": "ContractDefinition",
+        "src": "35:256:3"
+      }
+    ],
+    "id": 286,
+    "name": "SourceUnit",
+    "src": "0:293:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.7.6+commit.7338295f.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xf70F384f9F6a34C24c5Af58948A1ad395aa199A1",
+      "transactionHash": "0x2f1ef1174fb788a9e3a586b54367b3c3c1b137aaae425e9ae44069f8467f3d72"
+    }
+  },
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-09-18T11:55:13.585Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
