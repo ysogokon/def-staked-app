@@ -70,7 +70,7 @@
   "sourceMap": "35:500:1:-:0;;;128:52;;;;;;;;;;164:10;156:5;;:18;;;;;;;;;;;;;;;;;;35:500;;;;;;",
   "deployedSourceMap": "35:500:1:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;364:168;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;85:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;60:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;253:105;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;364:168;233:5;;;;;;;;;;219:19;;:10;:19;;;215:26;;;427:19:::1;460:11;427:45;;479:8;:21;;;501:24;;479:47;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;::::0;::::1;;;;;;;;;;;;::::0;::::1;;;;;;;;;240:1;215:26:::0;364:168;:::o;85:36::-;;;;:::o;60:20::-;;;;;;;;;;;;:::o;253:105::-;233:5;;;;;;;;;;219:19;;:10;:19;;;215:26;;;343:9:::1;316:24;:36;;;;215:26:::0;253:105;:::o",
   "source": "pragma solidity >=0.7.0 <0.9.0;\r\n\r\ncontract Migrations {\r\n  address public owner;\r\n  uint public last_completed_migration;\r\n\r\n  constructor() public {\r\n    owner = msg.sender;\r\n  }\r\n\r\n  modifier restricted() {\r\n    if (msg.sender == owner) _;\r\n  }\r\n\r\n  function setCompleted(uint completed) public restricted {\r\n    last_completed_migration = completed;\r\n  }\r\n\r\n  function upgrade(address new_address) public restricted {\r\n    Migrations upgraded = Migrations(new_address);\r\n    upgraded.setCompleted(last_completed_migration);\r\n  }\r\n}",
-  "sourcePath": "C:\\Users\\ysogokon\\source\\repos\\DApps\\defi-staking-app\\defi-staking-app\\src\\contracts\\Migrations.sol",
+  "sourcePath": "E:\\DApps\\def-staked-app\\src\\contracts\\Migrations.sol",
   "ast": {
     "absolutePath": "project:/src/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -1426,12 +1426,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x51d2AAd883202C7270e46bbDC4f3414D0ec1CddF",
-      "transactionHash": "0xba21a8890525dbd8259cd60cef700edac3d406914f36abd89aaf031cc3c4fefb"
+      "address": "0x03660B6bC8CA85b5b3b9E3E216e54FDb8625aA74",
+      "transactionHash": "0x7db9d7c5630c08ef04f0cd4fecfe03ec57c8bc1191ecb897519721fed760cd2b"
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-09-18T11:55:13.619Z",
+  "updatedAt": "2021-09-18T13:30:37.431Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
