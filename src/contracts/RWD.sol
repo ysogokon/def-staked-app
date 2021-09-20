@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
 
 contract RWD {
@@ -21,7 +22,7 @@ contract RWD {
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
     
-    constructor() public {
+    constructor() {
         balanceOf[msg.sender] = totalSupply;
     }
 
