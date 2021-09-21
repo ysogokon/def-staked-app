@@ -1,5 +1,3 @@
-const { assert } = require("console");
-
 const SunFlowerSeedToken = artifacts.require("SunFlowerSeedToken");
 const Tether = artifacts.require("Tether");
 const RWD = artifacts.require("RWD");
@@ -52,6 +50,54 @@ contract("DecentralBank", ([owner, customer]) => {
     it("contract has tokens", async () => {
       let balance = await reward.balanceOf(decentralBank.address);
       assert.equal(balance, tokens("1000000"));
+    });
+  });
+
+  describe("Yield farming", async () => {
+    it("rewards tokens for staking", async () => {
+      let result;
+      // Check inverstor balance
+      result = await tether.balanceOf(customer);
+      assert.equal(
+        result.toString(),
+        tokens("100"),
+        "customer wallet balance before staking"
+      );
+      // Check stakig for customer
+      await tether.approve(decentralBank.address, tokens("100"), {
+        from: customer,
+      });
+      await decentralBank.depositTokens(tokens("100"), { from: customer });
+
+      // Check update customer's balance
+      result = await tether.balanceOf(customer);
+      assert.equal(
+        result.toString(),
+        tokens("0"),
+        "customer wallet balance after staking"
+      );
+
+      // Check updated balance of DecentralBank
+      result = await tether.balanceOf(decentralBank.address);
+      assert.equal(
+        result.toString(),
+        tokens("100"),
+        "DecentralBank updated balance after staking from customer"
+      );
+
+      // Is Staking balance
+      result = await decentralBank.isStaking(customer);
+      assert.equal(
+        result.toString(),
+        "true",
+        "customer is staking status after staking"
+      );
+
+      // Issue Tokens
+      await decentralBank.issueTokens({ from: owner });
+
+      // Ensure only the owner can Issue Tokens
+      await decentralBank.issueTokens({ from: customer }).should.be.rejected;
     });
   });
 });
