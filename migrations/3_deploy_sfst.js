@@ -1,7 +1,7 @@
-const SunFlowerSeedToken = artifacts.require("SunFlowerSeedToken");
-const Tether = artifacts.require("Tether");
-const RWD = artifacts.require("RWD");
-const DecentralBank = artifacts.require("DecentralBank");
+const SunFlowerSeedToken = artifacts.require('SunFlowerSeedToken');
+const Tether = artifacts.require('Tether');
+const RWD = artifacts.require('RWD');
+const DecentralBank = artifacts.require('DecentralBank');
 
 module.exports = async function(deployer, network, accounts) {
   await deployer.deploy(SunFlowerSeedToken);
@@ -20,10 +20,10 @@ module.exports = async function(deployer, network, accounts) {
   const decentralBank = await DecentralBank.deployed();
 
   // Transfer all tokens to DecentralBank (1 million)
-  await rwd.transfer(decentralBank.address, "1000000000000000000000000");
+  await rwd.transfer(decentralBank.address, '1000000000000000000000000');
 
   // Transfer 100 Mock Tether tokens to investor
-  await tether.transfer(accounts[1], "100000000000000000000");
+  await tether.transfer(accounts[1], '100000000000000000000');
 
-  await seedToken.transfer(accounts[1], "100000000000000000000");
+  await seedToken.transfer(accounts[1], '100000000000000000000');
 };
