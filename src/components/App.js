@@ -5,6 +5,8 @@ import Web3 from 'web3';
 import Tether from '../truffle_abis/Tether.json';
 import RWD from '../truffle_abis/RWD.json';
 import DecentralBank from '../truffle_abis/DecentralBank.json';
+import Main from './Main';
+import ParticlesSettings from './ParticlesSettings';
 
 class App extends Component {
   async UNSAFE_componentWillMount() {
@@ -68,7 +70,6 @@ class App extends Component {
         .stakingBalance(this.state.account)
         .call();
       this.setState({ stakingBalance: stakingBalance.toString() });
-      console.log({ balance: stakingBalance });
     } else {
       window.alert(
         'Decentral Bank contract not deployed - no detected network'
@@ -77,6 +78,33 @@ class App extends Component {
 
     this.setState({ loading: false });
   }
+
+  // Staking function (DEPOSIT)
+  stakeTokens = amount => {
+    this.setState({ loading: true });
+    this.state.tether.methods
+      .approve(this.state.decentralBank._address, amount)
+      .send({ from: this.state.account })
+      .on('transactionHash', hash => {
+        this.state.decentralBank.methods
+          .depositTokens(amount)
+          .send({ from: this.state.account })
+          .on('transactionHash', hash => {
+            this.setState({ loading: false });
+          });
+      });
+  };
+
+  // Unstaking function (WITHDRAW)
+  unstakeTokens = () => {
+    this.setState({ loading: true });
+    this.state.decentralBank.methods
+      .unstakeTokens()
+      .send({ from: this.state.account })
+      .on('transactionHash', hash => {
+        this.setState({ loading: false });
+      });
+  };
 
   constructor(props) {
     super(props);
@@ -93,11 +121,46 @@ class App extends Component {
   }
 
   render() {
+    let content;
+    {
+      this.state.loading
+        ? (content = (
+            <p
+              id="loader"
+              className="text-center"
+              style={{ margin: '30px', color: '#fff' }}
+            >
+              LOADING PLEASE...
+            </p>
+          ))
+        : (content = (
+            <Main
+              tetherBalance={this.state.tetherBalance}
+              rwdTokenBalance={this.state.rwdTokenBalance}
+              stakingBalance={this.state.stakingBalance}
+              stakeTokens={this.stakeTokens}
+              unstakeTokens={this.unstakeTokens}
+            />
+          ));
+    }
     return (
-      <div>
+      <div className="App" style={{ position: 'relative' }}>
+        <div style={{ position: 'absolute' }}>
+          <ParticlesSettings />
+        </div>
+
         <Navbar account={this.state.account} />
-        <div className="text-center">
-          <h1>{console.log(this.state.loading)}</h1>
+        <div className="container-fluid mt-5" style={{ maxWidth: '600px' }}>
+          <div className="row">
+            <main
+              role="main"
+              className="col-lg-12 ml-auto mr-auto"
+              // style={{ maxWidth: '600px' }}
+              style={{ minHeight: '100vm' }}
+            >
+              <div>{content}</div>
+            </main>
+          </div>
         </div>
       </div>
     );
