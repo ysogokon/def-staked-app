@@ -5,17 +5,41 @@ class Airdrop extends Component {
     super();
     this.state = { time: {}, seconds: 20 };
     this.timer = 0;
-    this.startTime = this.startTime.bind(this);
+    this.startTimer = this.startTimer.bind(this);
     this.countDown = this.countDown.bind(this);
+  }
+
+  startTimer() {
+    if (this.timer == 0 && this.state.seconds > 0) {
+      this.timer = setInterval(this.countDown, 1000);
+    }
+  }
+
+  countDown() {
+    // 1 . countdown one second at a time
+    let seconds = this.state.seconds - 1;
+
+    this.setState({
+      time: this.secondsToTime(seconds),
+      seconds: seconds
+    });
+    // 2. stop counting when we hit zero
+    if (seconds == 0) {
+      this.props.decentralBank.methods.issueTokens();
+
+      clearInterval(this.timer);
+    }
   }
 
   secondsToTime(secs) {
     let hours, minutes, seconds;
-    hours = Math.floor(sesc / 3600);
-    let divisor_for_mins = secs % 3600;
-    minutes = Math.floor(divisor_for_mins / 60);
-    let divisor_for_secs = divisor_for_mins % 60;
-    seconds = Math.ceil(divisor_for_secs);
+    hours = Math.floor(secs / (60 * 60));
+
+    let devisor_for_minutes = secs % (60 * 60);
+    minutes = Math.floor(devisor_for_minutes / 60);
+
+    let devisor_for_seconds = devisor_for_minutes % 60;
+    seconds = Math.ceil(devisor_for_seconds);
 
     let obj = {
       h: hours,
@@ -25,8 +49,25 @@ class Airdrop extends Component {
     return obj;
   }
 
+  componentDidMount() {
+    let timeLeftVar = this.secondsToTime(this.state.seconds);
+    this.setState({ time: timeLeftVar });
+  }
+
+  airdropReleaseTokens() {
+    let stakingB = this.props.stakingBalance;
+    if (stakingB >= '50000000000000000000') {
+      this.startTimer();
+    }
+  }
+
   render() {
-    return <div>Airdrop</div>;
+    this.airdropReleaseTokens();
+    return (
+      <div style={{ color: 'black' }}>
+        {this.state.time.m}:{this.state.time.s}
+      </div>
+    );
   }
 }
 

@@ -65,6 +65,7 @@ class App extends Component {
         DecentralBank.abi,
         decentralBankData.address
       );
+
       this.setState({ decentralBank });
       let stakingBalance = await decentralBank.methods
         .stakingBalance(this.state.account)
@@ -140,6 +141,7 @@ class App extends Component {
               stakingBalance={this.state.stakingBalance}
               stakeTokens={this.stakeTokens}
               unstakeTokens={this.unstakeTokens}
+              decentralBank={this.state.decentralBank}
             />
           ));
     }
